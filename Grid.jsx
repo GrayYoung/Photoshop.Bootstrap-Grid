@@ -1,6 +1,6 @@
 /**
  * Photoshop.Bootstrap-Grid
- * Version: 0.0.2
+ * Version: 0.0.3
  * Author: Gray Young
  * 
  * Copyright 2016 Released under the MIT license.
@@ -34,16 +34,17 @@
 
 	app.preferences.rulerUnits = Units.PIXELS;
 	docHeight = parseFloat (app.activeDocument.height);
-	colWidth = config.container / config.grid_columns - config.grid_gutter_width;
-	offsetA = (parseFloat(app.activeDocument.width) - config.container + config.grid_gutter_width) / 2;
+	colWidth = config.container / config.grid.columns - config.grid.gutter_width;
+	offsetA = (parseFloat(app.activeDocument.width) - config.container + config.grid.gutter_width) / 2;
 	offsetB = offsetA + colWidth;
-	i = config.grid_columns;
+	i = config.grid.columns;
 	gridGroup.name = GROUP_NAME;
+	gridGroup.opacity = config.grid.opacity;
 	do {
 		grid = gridGroup.artLayers.add();
 		grid.name = 'Grid ' + i;
-		Shape.vector.createRectangle([offsetA, 0], [offsetB, 0], [offsetB, docHeight], [offsetA, docHeight]);
-		offsetA = offsetB + config.grid_gutter_width;
+		Shape.vector.createRectangle([[offsetA, 0], [offsetB, 0], [offsetB, docHeight], [offsetA, docHeight]], Shape.COLOR[config.grid.color]);
+		offsetA = offsetB + config.grid.gutter_width;
 		offsetB = offsetA + colWidth;
 		i--;
 	} while(i > 0);

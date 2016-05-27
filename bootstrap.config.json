@@ -1,5 +1,9 @@
 {
-  "grid_columns": 12,
-  "grid_gutter_width": 30,
+  "grid": {
+	"columns": 12,
+	"gutter_width": 30,
+	"opacity": 50,
+	"color": "RED"
+  },
   "container": 960
 }
