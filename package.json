@@ -1,0 +1,27 @@
+{
+  "name": "photoshop-bootstrap-grid",
+  "version": "0.0.4",
+  "description": "A script for create grid in Photoshop",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GrayYoung/Photoshop.Bootstrap-Grid.git"
+  },
+  "keywords": [
+    "Photoshop",
+    "Bootstrap",
+    "Grid"
+  ],
+  "author": "Marching Gray Young",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GrayYoung/Photoshop.Bootstrap-Grid/issues"
+  },
+  "homepage": "https://github.com/GrayYoung/Photoshop.Bootstrap-Grid#readme",
+  "dependencies": {
+    "json-js": "^1.1.2"
+  }
+}

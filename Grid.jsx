@@ -6,8 +6,8 @@
  * Copyright 2016 Released under the MIT license.
  */
 
-#include 'bower_components/JSON-js/json2.js'
-#include 'bower_components/Photoshop.Utilities/Shape.jsx'
+#include 'node_modules/json-js/json2.js'
+#include '../Photoshop.Utilities/Shape.jsx'
 
 (function() {
 	var GROUP_NAME = 'Grid Columus', Message = {
@@ -33,7 +33,7 @@
 	}
 
 	app.preferences.rulerUnits = Units.PIXELS;
-	docHeight = parseFloat (app.activeDocument.height);
+	docHeight = parseFloat(app.activeDocument.height);
 	colWidth = config.container / config.grid.columns - config.grid.gutter_width;
 	offsetA = (parseFloat(app.activeDocument.width) - config.container + config.grid.gutter_width) / 2;
 	offsetB = offsetA + colWidth;
